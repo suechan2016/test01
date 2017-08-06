@@ -1,0 +1,25 @@
+{
+  "name": "test01",
+  "version": "1.0.0",
+  "description": "Test01 API",
+  "main": "server.js",
+  "author": "Sue",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "config": "^1.20.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.15",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "jasmine-expect": "^3.7.1",
+    "jasmine-protractor-matchers": "^2.0.0",
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "mocha --timeout 10000"
+  }
+}
