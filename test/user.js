@@ -30,7 +30,7 @@ describe("GET /user", function () {
       .expect(function (res) {
         expect(res.body.page).eq("2");
         expect(res.body.per_page).eq(3);
-        res.body.data.forEach(function(element) {
+        res.body.data.forEach(function (element) {
           expect(element).to.have.property('id');
           expect(element).to.have.property('first_name');
           expect(element).to.have.property('last_name');
