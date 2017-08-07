@@ -22,7 +22,7 @@ describe("POST /login", function () {
             .expect(200);
     });
 
-    it("should failed without password", function (done) {
+    it("should fail without password", function (done) {
         request(app).post("/login").send({ email: "peter@klaven" })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
