@@ -1,4 +1,8 @@
 {
+  "name": "test01",
+  "version": "1.0.0",
+  "description": "API test for getting user list and login",
+  
   "scripts": {
     "test": "mocha -t 100000"
   },
