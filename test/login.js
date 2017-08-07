@@ -11,7 +11,7 @@ var expect = chai.expect;
 var app = "https://reqres.in/api";
 
 describe("POST /login", function () {
-    it("should login successfully with valid email and password", function (done) {
+    it("should login successfully with valid email and password", function () {
         request(app).post("/login").send({ email: "peter@klaven", password: "cityslicka" })
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
@@ -19,7 +19,7 @@ describe("POST /login", function () {
                 expect(res.body.token).eq("QpwL5tke4Pnpja7X");
 
             })
-            .expect(200, done);
+            .expect(200);
     });
 
     it("should failed without password", function (done) {
@@ -29,7 +29,7 @@ describe("POST /login", function () {
             .expect(function (res) {
                 expect(res.body.error).eq("Missing password");
             })
-            .expect(400, done);
+            .expect(400,done);
 
     });
 });

@@ -22,9 +22,9 @@ request(app)
   });
 
 describe("GET /user", function () {
-  // it("should work", function () {
-  //    return request(app).get("/users/2").expect(200);
-  // });
+  it("should work", function () {
+     return request(app).get("/users").expect(200);
+  });
 
   it("should return correct keys", function () {
     request(app).get("users").expect(function (res) {
@@ -34,13 +34,13 @@ describe("GET /user", function () {
   });
 
 
-  it("should get correct keys from user list", function (done) {
+  it("should get correct keys from user list", function () {
 
     request(app).get("users?page=2").expect(function (res) {
       //TODO
 
     })
-      .expect(200, done);
+      .expect(200);
 
   })
 
