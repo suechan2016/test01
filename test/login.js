@@ -1,12 +1,9 @@
 'use strict';
 
 // library requires
-
 var request = require('supertest')
-var protractorMatchers = require('jasmine-protractor-matchers');
 var chai = require("chai");
 var expect = chai.expect;
-
 
 var app = "https://reqres.in/api";
 

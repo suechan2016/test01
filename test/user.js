@@ -1,25 +1,14 @@
 'use strict';
 
 // library requires
-
 var request = require('supertest')
-var protractorMatchers = require('jasmine-protractor-matchers');
 var chai = require("chai");
 var expect = chai.expect;
 
-
 var app = "https://reqres.in/api";
-var LoginToken = null;
-
-
-request(app)
-  .get("api/users")
-  .expect('Content-Type', /json/)
-  .expect('Content-Length', '15')
-
 
 describe("GET /user", function () {
-  it("should work", function () {
+  it("should get status 200", function () {
     return request(app).get("/users").expect(200);
   })
 
@@ -49,13 +38,8 @@ describe("GET /user", function () {
       expect(res.body.data.last_name).eq("bluth");
       expect(res.body.data.avatar).eq("https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg");
 
-    })
-      .expect(200, done);
-
+    }) .expect(200, done);
   })
-
-
-
 });
 
 
